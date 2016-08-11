@@ -1,0 +1,20 @@
+{
+    "name": "connorvg/cachet-demo-plugin",
+    "description": "A demo plugin for Cachet",
+    "type": "cachet-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Connor S. Parks",
+            "email": "connor@connorvg.tv"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "bootstrap/start.php"
+        ],
+        "psr-4": {
+            "ConnorVG\\CachetDemoPlugin\\": "src/"
+        }
+    }
+}
