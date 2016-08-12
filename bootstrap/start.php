@@ -7,4 +7,5 @@ if (! defined('CACHET_VERSION')) {
 // @todo: make this a lot nicer to work with... Auto from config etc.
 // Will most likely need to utilise the composer.json file for extended customisations.
 
-app()->register(new ConnorVG\CachetDemoPlugin\Providers\DemoPluginServiceProvider);
+// This is too early in it's life cycle and needs to be figured out still.
+// app()->register(new ConnorVG\CachetDemoPlugin\Providers\DemoPluginServiceProvider);
