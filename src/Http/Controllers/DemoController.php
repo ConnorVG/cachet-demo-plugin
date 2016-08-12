@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ConnorVG\DemoCachetPlugin\Http\Controllers;
+namespace ConnorVG\CachetDemoPlugin\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Response;

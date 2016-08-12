@@ -35,10 +35,12 @@ class DemoPluginServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(Router $dispatcher)
+    public function boot(Router $router)
     {
         $router->group(['namespace' => $this->namespace], function (Router $router) {
-            foreach (glob(app_path('Http//Routes').'/*.php') as $file) {
+            $path = plugin_path(true, 'connorvg', 'cachet-demo-plugin');
+
+            foreach (glob($path.'/src/Http/Routes/*.php') as $file) {
                 $this->app->make('ConnorVG\\CachetDemoPlugin\\Http\\Routes\\'.basename($file, '.php'))->map($router);
             }
         });
