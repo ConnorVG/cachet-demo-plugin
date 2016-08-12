@@ -16,5 +16,8 @@
         "psr-4": {
             "ConnorVG\\CachetDemoPlugin\\": "src/"
         }
+    },
+    "require": {
+        "cachethq/cachet": "~2.4-dev"
     }
 }

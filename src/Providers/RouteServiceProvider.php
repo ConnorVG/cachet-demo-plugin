@@ -1,25 +1,22 @@
 <?php
 
 /*
- * This file is part of Cachet.
+ * This file is part of the Cachet Demo Plugin.
  *
- * (c) Alt Three Services Limited
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * (c) Connor S. Parks
  */
 
 namespace ConnorVG\CachetDemoPlugin\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 
 /**
- * This is the demo plugin service provider.
+ * This is the route service provider.
  *
  * @author Connor S. Parks <connor@connorvg.tv>
  */
-class DemoPluginServiceProvider extends ServiceProvider
+class RouteServiceProvider extends ServiceProvider
 {
     /**
      * This namespace is applied to your controller routes.
@@ -31,11 +28,13 @@ class DemoPluginServiceProvider extends ServiceProvider
     protected $namespace = 'ConnorVG\CachetDemoPlugin\Http\Controllers';
 
     /**
-     * Boot the service provider.
+     * Define the routes for the application.
+     *
+     * @param \Illuminate\Routing\Router $router
      *
      * @return void
      */
-    public function boot(Router $router)
+    public function map(Router $router)
     {
         $router->group(['namespace' => $this->namespace], function (Router $router) {
             $path = plugin_path(true, 'connorvg', 'cachet-demo-plugin');
@@ -44,15 +43,5 @@ class DemoPluginServiceProvider extends ServiceProvider
                 $this->app->make('ConnorVG\\CachetDemoPlugin\\Http\\Routes\\'.basename($file, '.php'))->map($router);
             }
         });
-    }
-
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        // ...
     }
 }

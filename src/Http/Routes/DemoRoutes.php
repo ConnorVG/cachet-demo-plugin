@@ -1,12 +1,9 @@
 <?php
 
 /*
- * This file is part of Cachet.
+ * This file is part of the Cachet Demo Plugin.
  *
- * (c) Alt Three Services Limited
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * (c) Connor S. Parks
  */
 
 namespace ConnorVG\CachetDemoPlugin\Http\Routes;
@@ -14,7 +11,7 @@ namespace ConnorVG\CachetDemoPlugin\Http\Routes;
 use Illuminate\Contracts\Routing\Registrar;
 
 /**
- * This is the feed routes class.
+ * This is the demo routes class.
  *
  * @author Connor S. Parks <connor@connorvg.tv>
  */

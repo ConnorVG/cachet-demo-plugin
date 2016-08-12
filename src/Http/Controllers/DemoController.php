@@ -1,12 +1,9 @@
 <?php
 
 /*
- * This file is part of Cachet.
+ * This file is part of the Cachet Demo Plugin.
  *
- * (c) Alt Three Services Limited
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * (c) Connor S. Parks
  */
 
 namespace ConnorVG\CachetDemoPlugin\Http\Controllers;
@@ -14,6 +11,11 @@ namespace ConnorVG\CachetDemoPlugin\Http\Controllers;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Response;
 
+/**
+ * This is the demo controller.
+ *
+ * @author Connor S. Parks <connor@connorvg.tv>
+ */
 class DemoController extends Controller
 {
     /**
