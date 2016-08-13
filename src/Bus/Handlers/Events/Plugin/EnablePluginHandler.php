@@ -20,6 +20,6 @@ class EnablePluginHandler
             return;
         }
 
-        // ...
+        dd('here');
     }
 }
