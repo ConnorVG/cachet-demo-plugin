@@ -6,7 +6,7 @@
  * (c) Connor S. Parks
  */
 
-namespace ConnorVG\CachetDemoPlugin\Providers;
+namespace ConnorVG\CachetDemoPlugin\Foundation\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;

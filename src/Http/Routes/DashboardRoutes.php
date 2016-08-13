@@ -11,14 +11,14 @@ namespace ConnorVG\CachetDemoPlugin\Http\Routes;
 use Illuminate\Contracts\Routing\Registrar;
 
 /**
- * This is the demo routes class.
+ * This is the dashboard routes class.
  *
  * @author Connor S. Parks <connor@connorvg.tv>
  */
-class DemoRoutes
+class DashboardRoutes
 {
     /**
-     * Define the demo plugin routes.
+     * Define the demo plugin dashboard routes.
      *
      * @param \Illuminate\Contracts\Routing\Registrar $router
      *
@@ -27,9 +27,10 @@ class DemoRoutes
     public function map(Registrar $router)
     {
         $router->group([
-            'middleware' => ['web', 'ready'],
-            'prefix'     => 'cachet-demo-plugin',
-            'as'         => 'cachet-demo-plugin.',
+            'middleware' => ['web', 'auth'],
+            'namespace'  => 'Dashboard',
+            'prefix'     => 'dashboard/cachet-demo-plugin',
+            'as'         => 'dashboard.cachet-demo-plugin.',
         ], function (Registrar $router) {
             $router->get('/', [
                 'as'   => 'index',

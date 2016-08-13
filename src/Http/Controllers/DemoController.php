@@ -23,7 +23,7 @@ class DemoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function indexAction()
+    public function showIndex()
     {
         return new Response('Hello, World!');
     }
