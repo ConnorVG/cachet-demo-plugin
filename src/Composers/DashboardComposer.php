@@ -37,7 +37,7 @@ class DashboardComposer
             'active' => 'dashboard/cachet-demo-plugin*',
             'url'    => route('dashboard.cachet-demo-plugin.index'),
             'icon'   => 'ion ion-ios-nutrition-outline',
-            'title'  => trans('dashboard.cachet-demo-plugin.cachet-demo-plugin'),
+            'title'  => trans('connorvg/cachet-demo-plugin::dashboard.cachet-demo-plugin'),
             'order'  => 70001,
         ]];
 

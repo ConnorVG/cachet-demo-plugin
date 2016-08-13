@@ -8,19 +8,19 @@
 
 namespace ConnorVG\CachetDemoPlugin\Foundation\Providers;
 
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Translation\Translator;
 
-class ViewServiceProvider extends ServiceProvider
+class TranslatorServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
      *
-     * @param \Illuminate\Contracts\View\Factory $factory
+     * @param \Illuminate\Translation\Translator $translator
      */
-    public function boot(Factory $factory)
+    public function boot(Translator $translator)
     {
-        $factory->addNamespace('connorvg/cachet-demo-plugin', plugin_path(true, 'connorvg', 'cachet-demo-plugin').'/resources/views');
+        $translator->addNamespace('connorvg/cachet-demo-plugin', plugin_path(true, 'connorvg', 'cachet-demo-plugin').'/resources/lang');
     }
 
     /**

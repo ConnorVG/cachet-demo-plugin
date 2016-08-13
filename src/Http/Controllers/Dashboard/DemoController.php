@@ -27,6 +27,6 @@ class DemoController extends Controller
     public function showIndex()
     {
         return View::make('connorvg/cachet-demo-plugin::dashboard.index')
-            ->withPageTitle(trans('dashboard.cachet-demo-plugin.cachet-demo-plugin').' - '.trans('dashboard.dashboard'));
+            ->withPageTitle(trans('connorvg/cachet-demo-plugin::dashboard.cachet-demo-plugin').' - '.trans('dashboard.dashboard'));
     }
 }

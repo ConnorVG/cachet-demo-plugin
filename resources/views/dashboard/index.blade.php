@@ -8,7 +8,7 @@
     <div class="content-wrapper">
         <div class="header sub-header">
             <span class="uppercase">
-                <i class="ion ion-ios-nutrition-outline"></i> {{ trans('dashboard.cachet-demo-plugin.cachet-demo-plugin') }}
+                <i class="ion ion-ios-nutrition-outline"></i> {{ trans('connorvg/cachet-demo-plugin::dashboard.cachet-demo-plugin') }}
             </span>
             <div class="clearfix"></div>
         </div>

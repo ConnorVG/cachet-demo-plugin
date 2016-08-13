@@ -11,6 +11,7 @@ return [
         'ConnorVG\CachetDemoPlugin\Foundation\Providers\ComposerServiceProvider',
         'ConnorVG\CachetDemoPlugin\Foundation\Providers\EventServiceProvider',
         'ConnorVG\CachetDemoPlugin\Foundation\Providers\RouteServiceProvider',
+        'ConnorVG\CachetDemoPlugin\Foundation\Providers\TranslatorServiceProvider',
         'ConnorVG\CachetDemoPlugin\Foundation\Providers\ViewServiceProvider',
     ],
 ];
