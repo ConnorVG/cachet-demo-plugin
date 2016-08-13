@@ -28,6 +28,30 @@ class RouteServiceProvider extends ServiceProvider
     protected $namespace = 'ConnorVG\CachetDemoPlugin\Http\Controllers';
 
     /**
+     * Define the route model bindings, pattern filters, etc.
+     *
+     * @param \Illuminate\Routing\Router $router
+     *
+     * @return void
+     */
+    public function boot(Router $router)
+    {
+        parent::boot($router);
+
+        $this->registerBindings();
+    }
+
+    /**
+     * Register model bindings.
+     *
+     * @return void
+     */
+    protected function registerBindings()
+    {
+        $this->app->router->model('cdp_entry', 'ConnorVG\CachetDemoPlugin\Models\Entry');
+    }
+
+    /**
      * Define the routes for the application.
      *
      * @param \Illuminate\Routing\Router $router

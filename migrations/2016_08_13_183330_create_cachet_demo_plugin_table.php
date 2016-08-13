@@ -23,6 +23,11 @@ class CreateCachetDemoPluginTable extends Migration
             $table->engine = 'InnoDB';
 
             $table->increments('id');
+            $table->string('text');
+            $table->integer('order');
+            $table->timestamps();
+
+            $table->index('order');
         });
     }
 

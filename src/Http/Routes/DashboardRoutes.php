@@ -33,8 +33,22 @@ class DashboardRoutes
             'as'         => 'dashboard.cachet-demo-plugin.',
         ], function (Registrar $router) {
             $router->get('/', [
-                'as'   => 'index',
-                'uses' => 'DemoController@showIndex',
+                'as'   => 'entries',
+                'uses' => 'DemoController@showEntries',
+            ]);
+            $router->get('/add', [
+                'as'   => 'entries.add',
+                'uses' => 'DemoController@showAddEntry',
+            ]);
+            $router->post('/add', 'DemoController@addEntryAction');
+            $router->get('/{cdp_entry}/edit', [
+                'as'   => 'entries.edit',
+                'uses' => 'DemoController@showEditEntry',
+            ]);
+            $router->post('/{cdp_entry}/edit', 'DemoController@updateEntryAction');
+            $router->delete('/{cdp_entry}/delete', [
+                'as'   => 'delete',
+                'uses' => 'DemoController@deleteEntryAction',
             ]);
         });
     }

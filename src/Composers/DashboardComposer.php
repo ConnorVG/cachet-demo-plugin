@@ -35,9 +35,9 @@ class DashboardComposer
     {
         $tabs = [[
             'active' => 'dashboard/cachet-demo-plugin*',
-            'url'    => route('dashboard.cachet-demo-plugin.index'),
+            'url'    => route('dashboard.cachet-demo-plugin.entries'),
             'icon'   => 'ion ion-ios-nutrition-outline',
-            'title'  => trans('connorvg/cachet-demo-plugin::dashboard.cachet-demo-plugin'),
+            'title'  => trans('connorvg/cachet-demo-plugin::dashboard.cachet-demo-plugin-short').' '.trans_choice('connorvg/cachet-demo-plugin::dashboard.entries.entries', 2),
             'order'  => 70001,
         ]];
 

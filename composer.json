@@ -10,9 +10,6 @@
         }
     ],
     "autoload": {
-        "files": [
-            "bootstrap/start.php"
-        ],
         "psr-4": {
             "ConnorVG\\CachetDemoPlugin\\": "src/"
         }
